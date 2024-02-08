@@ -1,14 +1,5 @@
-from car import Car
-from car_factory import CarFactory
-from .engine_part import EnginePart
-from .battery_part import BatteryPart
+from engine.engine import EnginePart
 
-
-class CapuletCarFactory(CarFactory):
-    def create_car(self):
-        engine = EnginePart("CapuletEngine")
-        battery = BatteryPart("CapuletBattery")
-        return Car(engine, battery)
-    
-    def needs_service(self):
-        return True
+class CapuletEngine(EnginePart):
+    def needs_service(self) -> bool:
+        return self.mileage >= 30000

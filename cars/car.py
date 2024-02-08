@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
-class CarFactory(ABC):
 
+class CarPart(ABC):
     @abstractmethod
-    def create_car(self):
+    def needs_service(self) -> bool:
         pass
