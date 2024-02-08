@@ -1,0 +1,34 @@
+                    +------------------------+
+                    |           CarPart      |
+                    +------------------------+
+                    | + checkService(): bool |
+                    +------------------------+
+                                 ^
+                                 |
+          +----------------------------------+
+          |                                  |
+          |                                  |
+   +--------------+                +-------------+
+   | EnginePart   |                | BatteryPart |
+   +--------------+                +-------------+
+   |              |                |             |
+   | - type: str  |                | - type: str |
+   +--------------+                +-------------+
+          ^                               ^
+          |                               |
+  +--------------+                +----------------+
+  | CapuletPart  |                | SternmanPart   |
+  +--------------+                +----------------+
+  |              |                |                |
+  |              |                |                |
+  |              |                |                |
++---------------+               +---------------+
+| WilloughbyPart|               | NubbinPart    |
++---------------+               +---------------+
+
+
+Explanation:
+CarPart: Represents a generic car part with a method checkService() that defines the service criteria for that part.
+EnginePart and BatteryPart: Subclasses of CarPart representing specific types of car parts (e.g., engine, battery).
+CapuletPart, SternmanPart, WilloughbyPart, and NubbinPart: Subclasses of specific car parts representing different car models.
+Each specific car part subclass will implement its own version of checkService() method according to the service criteria specific to that part and car model.
