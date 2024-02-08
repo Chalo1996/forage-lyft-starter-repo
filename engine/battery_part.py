@@ -7,4 +7,4 @@ class BatteryPart(CarPart):
 
     def check_service(self) -> bool:
         # Custom logic for battery service criteria
-        pass
+        return True

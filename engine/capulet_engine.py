@@ -9,3 +9,6 @@ class CapuletCarFactory(CarFactory):
         engine = EnginePart("CapuletEngine")
         battery = BatteryPart("CapuletBattery")
         return Car(engine, battery)
+    
+    def needs_service(self):
+        return True

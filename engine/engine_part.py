@@ -7,4 +7,4 @@ class EnginePart(CarPart):
 
     def check_service(self) -> bool:
         # Custom logic for engine service criteria
-        pass
+        return True
